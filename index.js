@@ -15,6 +15,8 @@ async function main(flags) {
         args: [__filename, '--is-page']
     });
 
+    // browser.newPage appears to be unsupported
+    // check if pages[] is always populated
     const [page] = await browser.pages();
 
     await page.setViewport({ width: 1240, height: 720 });
